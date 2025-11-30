@@ -121,7 +121,7 @@ int main(){
     cout<<"Name: "<< name<<"\tPAU Student: "<<(is_PAU_student? "Yes" : "No")<<endl;
     cout<<"Course Name: "<<course_name<<"\tDays "<<days<<endl;
     cout<<"Registration: ₦"<<final_registration_fee<<endl;
-    cout<<"Loding: ₦"<<lodging_cost<<" x "<<days<<"= ₦"<<final_lodging_cost<<endl;
+    cout<<"Lodging: ₦"<<lodging_cost<<" x "<<days<<"= ₦"<<final_lodging_cost<<endl;
     cout<<"Random draw: "<<random_num<<"\tPromo applied ₦"<<promo<<endl;
     cout<<"Total: ₦"<<total_1<<endl;
 
