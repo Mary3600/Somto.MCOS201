@@ -3,11 +3,10 @@
 #include <iostream>
 #include <string>
 #include <limits>
-#include <iomanip> // For currency formatting
+#include <iomanip>
 
 using namespace std;
 
-// Function Prototypes as specified in the question
 bool verifyPin(int correctPin);
 void displayMenu();
 double viewBalance(double balance);
@@ -132,4 +131,27 @@ double withdrawMoney(double balance, double daily_withdrawal_limit) {
         cout << "New Balance: N " << fixed << setprecision(2) << balance << endl;
     }
     return balance;
+}
+
+int resetPin(int currentPin) {
+    int oldPinInput, newPinInput;
+    
+    cout << "Enter old PIN to verify: ";
+    cin >> oldPinInput;
+
+    if (oldPinInput == currentPin) {
+        cout << "Enter new PIN: ";
+        cin >> newPinInput;
+        
+        if(newPinInput >= 0) {
+             cout << "PIN changed successfully." << endl;
+             return newPinInput;
+        } else {
+             cout << "Invalid PIN format." << endl;
+             return currentPin;
+        }
+    } else {
+        cout << "Incorrect old PIN. Transaction cancelled." << endl;
+        return currentPin;
+    }
 }
