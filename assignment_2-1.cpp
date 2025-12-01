@@ -20,7 +20,7 @@ int main(){
     cout<<"What is your full name?"<<endl;
     getline(cin,name);
 
-    cout<<"What is your JAMB score?"<<endl;
+    cout<<"What is your JAMB score?(0-400)"<<endl;
     cin>>jamb_score;
 
     cout<<"What's your WAEC average?(0-100)"<<endl;
